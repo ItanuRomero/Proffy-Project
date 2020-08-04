@@ -92,7 +92,7 @@
 
 @media (max-width: 699px) {
     :root {
-        font-size: 50%; /* modificando as medidas rem */
+        font-size: 40%; /* modificando as medidas rem */
     }
 }
 
