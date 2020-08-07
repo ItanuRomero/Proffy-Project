@@ -1,3 +1,7 @@
+html body {
+    height: 100vh;
+}
+
 #page-landing {
     background-color: var(--color-primary);
 }
@@ -119,6 +123,10 @@
 
     .logo-container img {
         height: 127px;
+    }
+
+    #container img {
+        margin: 0;
     }
 
     .hero-image {
