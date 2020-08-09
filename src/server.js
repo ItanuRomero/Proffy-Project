@@ -1,81 +1,12 @@
-//dados
-const proffys = [
-    {
-        name: "Itanu Romero",
-        avatar: "https://avatars3.githubusercontent.com/u/66224956?s=460&u=a76ecf5c6b6fad99b3dd41213ac1b5b881231f1e&v=4",
-        whatsapp: "998998889",
-        bio:"Entusiasta do mundo da tecnologia. Aprendendo a gostar de resolver problemas, e ensinando para aprender.", 
-        subject: "Tecnologia", 
-        cost: "50", 
-        weekday: [0], 
-        time_from: [720], 
-        time_to: [1220]
-    }
-]
-
-const subjects = [
-    "Artes",
-    "Biologia",
-    "Ciências",
-    "Educação física",
-    "Física",
-    "Geografia",
-    "História",
-    "Matemática",
-    "Português",
-    "Química",
-]
-
-const weekdays = [
-    "Domingo",
-    "Segunda-feira",
-    "Terça-feira",
-    "Quarta-feira",
-    "Quinta-feira",
-    "Sexta-feira",
-    "Sábado",
-]
-
-//funcionalidades
-
-function getSubject(subjectNumber) {
-    const position = +subjectNumber - 1
-    return subjects[position]
-}
-
-function pageLanding(req, resp) {
-    return resp.render("index.html")
-}
-
-function pageStudy(req, resp) {
-    const filters = req.query
-    return resp.render("study.html", { proffys, filters, subjects, weekdays })
-}
-
-function pageGiveClasses(req, resp) {
-    const data = req.query
-
-    const isNotEmpty = Object.keys(data).length > 0
-    //se tiver dados
-    if (isNotEmpty) {
-
-        //mostra a materia em vez do numero dela
-        data.subject = getSubject(data.subject)
-
-        //adcionar a colecao de proffys
-        proffys.push(data)
-
-        return resp.redirect("/study")
-    }
-    
-
-    //se nao, nao adicionar
-    
-    return resp.render("give-classes.html", {subjects, weekdays})
-}
 //servidor
 const express = require('express')
 const server = express()
+//importando as paginas
+const {
+    pageLanding,
+    pageStudy,
+    pageGiveClasses
+} = require('./pages')
 //configurando nunjucks
 
 const nunjucks = require('nunjucks')
