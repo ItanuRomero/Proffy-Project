@@ -1,3 +1,4 @@
+//dados
 const proffys = [
     {
         name: "Itanu Romero",
@@ -12,18 +13,63 @@ const proffys = [
     }
 ]
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
+
+//funcionalidades
+function pageLanding(req, resp) {
+    return resp.render("index.html")
+}
+
+function pageStudy(req, resp) {
+    const filters = req.query
+    return resp.render("study.html", { proffys, filters, subjects, weekdays })
+}
+
+function pageGiveClasses(req, resp) {
+    const dados = req.query
+    //adcionar a colecao de proffys
+
+    
+    return resp.render("give-classes.html", {subjects, weekdays})
+}
+//servidor
 const express = require('express')
 const server = express()
+//configurando nunjucks
 
-server.use(express.static("public"))
-
-.get("/", (req, resp) => {
-    return resp.sendFile(__dirname + "/views/index.html")
+const nunjucks = require('nunjucks')
+nunjucks.configure('src/views', {
+    express: server,
+    noCashe: true,
 })
-.get("/study", (req, resp) => {
-    return resp.sendFile(__dirname + "/views/study.html")
-})
-.get("/give-classes", (req, resp) => {
-    return resp.sendFile(__dirname + "/views/give-classes.html")
-})
+//inicio e configuracao do servidor
+server
+//configurando arquivos estaticos
+.use(express.static("public"))
+//rotas da aplicacao
+.get("/", pageLanding)
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
+//start do servidor
 .listen(5500)
