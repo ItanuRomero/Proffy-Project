@@ -1,5 +1,17 @@
 # Proffy-Project
  Projeto feito no evento Next Level Week #02
+ 
+# Como foi?
+Depois de uma **árdua** semana de desafios e aprendizados, foi desenvolvido o aplicativo Proffy.
+ ### Esta é uma plataforma web na qual são cadastrados professores de diversas matérias e esses cadastros podem ser pesquisados pelos alunos.
+
+# E qual o aprendizado?
+Em 7 dias consegui obter conhecimentos (claro que básicos) importantíssimos nas tecnologias:
+ * HTML, CSS e JS (
+ * FRONT-END
+ * BACK-END
+ * BANCO DE DADOS
+ e muitas outras coisas, agradeço imensamente a todos os envolvidos principalmente o **Mayk Brito** um excelente professor.
 
 
 ## alguns links importantes: 
