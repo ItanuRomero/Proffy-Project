@@ -13,10 +13,13 @@ Em 7 dias consegui obter conhecimentos (claro que básicos) importantíssimos na
  * BANCO DE DADOS
  e muitas outras coisas, agradeço imensamente a todos os envolvidos principalmente o **Mayk Brito** um excelente professor.
 
+# Próximas etapas?
+
+**Claro que terão!!** [saiba mais](https://blogentusiastas.blogspot.com/2020/08/sera-que-podemos-ajudar-mais.html#more)
+
 
 ## alguns links importantes: 
 Para acessar o template [front-end](https://www.notion.so/Front-end-ab15ef64dbe7459aba38364cf60af9d2).
 Para acessar o template [back-end](https://www.notion.so/Back-end-4440c9aeda8c47d4856a8e4d4069e379).
 Para acessar o template [banco de dados](https://www.notion.so/Banco-de-Dados-c6b7589f7ca740979a746d9289ab71f6)
-
-[layout](https://www.notion.so/Layout-Proffy-3d5f45f54ec54ef9b2103565b7cce4e1)
+Para acessar o [layout](https://www.notion.so/Layout-Proffy-3d5f45f54ec54ef9b2103565b7cce4e1)
